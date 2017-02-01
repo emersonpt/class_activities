@@ -23,6 +23,16 @@
 		$( "#cityField" ).keyup(
 		function()
 		{
+			$.getJSON("staticCity.txt",
+			function(data)
+			{
+				console.log("Got "+data);
+				console.log("Got "+data[0]);
+				console.log("Got "+data[0].city);
+				console.log("Got MILK?");
+			}
+			
+			);
  			$("#txtHint").text("Keyup: "+$("#cityField").val());
 		}
 		);
